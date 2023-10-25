@@ -3,14 +3,19 @@ import java.io.*;
 import java.net.*;
 
 public class Client {
-    String serverName = "localhost";
-    int serverPort = 6789;
+    String serverName;
+    int serverPort;
     Socket mioSocket;
     BufferedReader tastiera;
     String stringaUtente;
     String stringaDalServer;
     DataOutputStream out;
     BufferedReader in;
+
+    public Client(String serverName, int serverPort){
+        this.serverName = serverName;
+        this.serverPort = serverPort;
+    }
 
     public Socket connetti(){
         System.out.println("CLIENT is running...");
