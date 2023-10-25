@@ -28,7 +28,7 @@ public class Client {
     public void comunica(){
         for(;;){
             try {
-                System.out.println("Inserisci i dati da trasmettere al server (num1, num2, operatore):"+"\n");
+                System.out.println("Inserisci i dati da trasmettere al server (num1,num2,operatore):"+"\n");
                 stringaUtente = tastiera.readLine();
                 System.out.println("invio al server");
                 out.writeBytes(stringaUtente + "\n");
